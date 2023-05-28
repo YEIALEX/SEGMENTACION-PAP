@@ -31,7 +31,7 @@ cuello uterino.
 </p>
 
 <p align="center">
-  <img src="./pipe/pipeB.jpg" width="200" title="Overall Pipeline">
+  <img src="./pipe/pipeB.jpg" width="300" title="Overall Pipeline">
 </p>
 
 # Dataset link
@@ -47,14 +47,7 @@ Nota: base de datos disponible en el momento de realizar este proyecto.
 +-- preprocesamientoKmean.ipynb
 +-- evalNucleoKmean.csv
 +-- caractNucleoKmean.csv
-+-- evaluacionSegKmean.ipynb
-+-- caractNucleoKmeanBinBal.csv
-+-- classBinKmean.ypinb
-+-- caractNucleoKmeanCytBal.csv
-+-- classCytKmean.ipynb
-+-- caractNucleoKmeanHistBal.csv
-+-- classHistKmean.ipynb
-+-- balance.ipynb
++-- evaluacionSegKmean.ipynb 
 
 ```
 - Meanshift.
@@ -64,13 +57,7 @@ Nota: base de datos disponible en el momento de realizar este proyecto.
 +-- evalNucleoMeanShift.csv
 +-- caractNucleoShift.csv
 +-- evaluacionSegShift.ipynb
-+-- caractNucleoShiftBinBal.csv
-+-- classBinShift.ypinb
-+-- caractNucleoShiftCytBal.csv
-+-- classCytShift.ipynb
-+-- caractNucleoShiftHistBal.csv
-+-- classHistShift.ipynb
-+-- balance.ipynb
+
 
 ```
 
@@ -84,6 +71,26 @@ los pesos de la red UNET deben descargarse y pegarse en sus respectivas carpetas
 |   +-- val
 +-- preprocesamiento.py
 +-- classBin.py
+
++-- data
++-- preprocesamiento.ipynb
+|   +-- procesamiento de las imagenes de entrada
+|   +-- procesamiento imagenes de referencia
+|   +-- aumento de datos
+|   +-- datos de prueba
++-- entrenamientoUnet.ypinb
+|   +-- .
+|   +-- train
++-- evalNucleoKmean.csv
++-- caractNucleoKmean.csv
++-- evaluacionSegKmean.ipynb
++-- caractNucleoKmeanBinBal.csv
++-- classBinKmean.ypinb
++-- caractNucleoKmeanCytBal.csv
++-- classCytKmean.ipynb
++-- caractNucleoKmeanHistBal.csv
++-- classHistKmean.ipynb
++-- balance.ipynb
 
 ```
 
