@@ -74,7 +74,9 @@ Nota: base de datos disponible en el momento de realizar este proyecto.
 
 ```
 
-- UNET
+- UNET <br>
+los pesos de la red UNET deben descargarse y pegarse en sus respectivas carpetas núcleo y citoplasma <br>
+[pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) 
 ```
 +-- data
 |   +-- .
