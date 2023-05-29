@@ -99,14 +99,3 @@ los pesos de la red UNET deben descargarse y pegarse en sus respectivas carpetas
 ```
 pip install -r requirements.txt
 ```
-ArgumentosParametros y configuración:
-```
-Kmeans
-- K=20
-- n=x
-```
-- `--num_epochs`: Number of epochs of training. Default = 70
-- `--learning_rate`: Learning Rate. Default = 0.0001
-- `--batch_size`: Batch Size. Default = 16
-- `--path`: Data Path. Default= './'
-- `--kfold`: K-Fold, to perform K fold cross validation. Default= 5

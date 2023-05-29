@@ -4,10 +4,11 @@ matplotlib
 seaborn
 opencv-python
 tensorflow
-sklearn
+scikit-learn
 scikit-image
 scipy
 featurewiz
 tqdm
 kneed
 seaborn
+plotly-express
