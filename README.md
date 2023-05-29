@@ -26,12 +26,18 @@ las técnicas de segmentación y clasificación utilizadas en el análisis de fr
 proporcionando resultados prometedores para el apoyo al diagnóstico de cáncer de
 cuello uterino.
 
-<p align="center">
-  <img src="./pipe/pipeA.png" width="600" title="Overall Pipeline">
-</p>
+Algoritmo de segmentación semántica y clasificación de celulas de cáncer cervical de la prueba de Papanicolaou.
+
+Esquema de modelo propuesto de segmentación y clasificación:
 
 <p align="center">
-  <img src="./pipe/pipeB.png" width="300" title="Overall Pipeline">
+  <img src="./pipe/pipeA.png" width="600" >
+</p>
+
+Se realiza un preprocesamiento y segmentación de las imágenes de las células de cervicales. Para aplicar los algoritmos Kmeans y Meanshift, es necesario preprocesar las imágenes utilizando técnicas de filtrado y generación de superpíxeles seleccionadas. 
+
+<p align="center">
+  <img src="./pipe/pipeB.png" width="300" >
 </p>
 
 
@@ -45,21 +51,24 @@ Nota: base de datos disponible en el momento de realizar este proyecto.
 
 - Kmeans.
 ```
-+-- data
-+-- preprocesamientoKmean.ipynb
-+-- evalNucleoKmean.csv
-+-- caractNucleoKmean.csv
-+-- evaluacionSegKmean.ipynb 
++--DatasetNormalizado
+|   +-- Tipo1
+|   +-- Tipo2
+|   ...
++-- Codigos_F
++-- Arhivos CSV
++-- Kmeans.ipynb
 
 ```
 - Meanshift.
 ```
-+-- data
-+-- preprocesamientoMeanShift.ipynb
-+-- evalNucleoMeanShift.csv
-+-- caractNucleoShift.csv
-+-- evaluacionSegShift.ipynb
-
++--DatasetNormalizado
+|   +-- Tipo1
+|   +-- Tipo2
+|   ...
++-- Codigos_F
++-- Arhivos CSV
++-- Meanshift.ipynb
 
 ```
 
@@ -70,45 +79,47 @@ Estrucutra UNET
   <img src="./pipe/modeloU-net.png" width="400" title="Overall Pipeline">
 </p>
 
+Si se quiere volver a entrenar, correr los archivos de la carpeta NUCLEOUNET y CITOUNET para núcleo y citoplasma respectivamente
+
+debe tenr la siguiente extructura de carpetas y archivos 
 
 ```
-+-- data
-|   +-- .
-|   +-- train
-|   +-- val
++-- CELULAS  -- train
++-- MASCARAS -- referencia
++-- PRUEBA   -- test
 +-- preprocesamiento.ipynb
 +-- entrenamientoUnet.ipynb
 ```
 
 se obtienen los modelos y sus pesos entrenados.  
 
-El modelo y el peso de la red UNET deben descargarse y pegarse en sus respectivas carpetas núcleo y citoplasma <br>
+El modelo y el peso de la red UNET deben descargarse y pegarse en la carpeta PesosModelo <br>
+Estos son necesarios para probar el algoritmo de segmentacion con la red UNET y segmentar las imagenes de las células individuales.
 [pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) 
 
+El proyecto debe tener la siguiente extructura de carpeta y archivos:
+
 
 ```
-+-- data
-+-- preprocesamiento.ipynb
-|   +-- procesamiento de las imagenes de entrada
-|   +-- procesamiento imagenes de referencia
-|   +-- aumento de datos
-|   +-- datos de prueba
-+-- entrenamientoUnet.ypinb
-|   +-- .
-|   +-- train
-+-- evalNucleoKmean.csv
-+-- caractNucleoKmean.csv
-+-- evaluacionSegKmean.ipynb
-+-- caractNucleoKmeanBinBal.csv
-+-- classBinKmean.ypinb
-+-- caractNucleoKmeanCytBal.csv
-+-- classCytKmean.ipynb
-+-- caractNucleoKmeanHistBal.csv
-+-- classHistKmean.ipynb
-+-- balance.ipynb
++-- Codigos_F
+|   +-- funciones.py
+|   +-- rotating_calipers.py
++-- PesosModelo
+|   +-- unetCito2.h5
+|   +-- unetCitoPesos2.h5
+|   +-- unetNucleo4.h5
+|   +-- unetNucleoPesos4.h5
++--DatasetNormalizado
+|   +-- Tipo1
+|   +-- Tipo2
+|   ...
++--Arhivos CSV
+|   +-- .csv
+|   ...
++-- UNET.ipynb
 
 ```
-
+La Carpeta "Codigos_F" contiene las funciones con las técnicas de preprocesado, segmentación, caracterización y evaluación con los parametros ya establecidos.
 
 1. installar los paquetes necesarios:
 ```
