@@ -27,11 +27,11 @@ proporcionando resultados prometedores para el apoyo al diagnóstico de cáncer 
 cuello uterino.
 
 <p align="center">
-  <img src="./Pipe/pipeA.png" width="600" title="Overall Pipeline">
+  <img src="./pipe/pipeA.png" width="600" title="Overall Pipeline">
 </p>
 
 <p align="center">
-  <img src="./Pipe/pipeB.png" width="300" title="Overall Pipeline">
+  <img src="./pipe/pipeB.png" width="300" title="Overall Pipeline">
 </p>
 
 # Dataset link
