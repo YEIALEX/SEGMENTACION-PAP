@@ -3,7 +3,6 @@ pandas
 matplotlib
 seaborn
 opencv-python
-tensorflow
 scikit-learn
 scikit-image
 scipy
