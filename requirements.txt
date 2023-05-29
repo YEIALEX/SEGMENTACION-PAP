@@ -9,3 +9,5 @@ scikit-image
 scipy
 featurewiz
 tqdm
+kneed
+seaborn
