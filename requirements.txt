@@ -12,3 +12,4 @@ tqdm
 kneed
 seaborn
 plotly-express
+os-sys

@@ -34,7 +34,7 @@ Esquema de modelo propuesto de segmentación y clasificación:
   <img src="./pipe/pipeA.png" width="600" >
 </p>
 
-Se realiza un preprocesamiento y segmentación de las imágenes de las células de cervicales. Para aplicar los algoritmos Kmeans y Meanshift, es necesario preprocesar las imágenes utilizando técnicas de filtrado y generación de superpíxeles seleccionadas. 
+Se realiza el preprocesamiento y segmentación de las imágenes de las células cervicales. Para aplicar los algoritmos Kmeans y Meanshift, es necesario preprocesar las imágenes utilizando técnicas de filtrado y generación de superpíxeles seleccionadas. 
 
 <p align="center">
   <img src="./pipe/pipeB.png" width="300" >
@@ -47,30 +47,31 @@ Se realiza un preprocesamiento y segmentación de las imágenes de las células 
 
 Nota: base de datos disponible en el momento de realizar este proyecto.
 
-# Intrucciones para correr el codigo
+# Intrucciones para ejecución del código
 
 - Kmeans.
 ```
 +--DatasetNormalizado
-|   +-- Tipo1
-|   +-- Tipo2
+|   +-- Células del conjunto de datos
 |   ...
 +-- Codigos_F
 +-- Arhivos CSV
 +-- Kmeans.ipynb
 
 ```
+El archivo Kmeans.ipynb contiene todas las fases correspondientes a la segmentación del núcleo junto con los archivos de las métricas de evaluación y las características extraídas. 
+
 - Meanshift.
 ```
 +--DatasetNormalizado
-|   +-- Tipo1
-|   +-- Tipo2
+|   +-- Células del conjunto de datos
 |   ...
 +-- Codigos_F
 +-- Arhivos CSV
 +-- Meanshift.ipynb
 
 ```
+El archivo Meanshift.ipynb contiene todas las fases correspondientes a la segmentación del núcleo junto con los archivos de las métricas de evaluación y las características extraídas. 
 
 - UNET <br>
 Estrucutra UNET
@@ -79,7 +80,7 @@ Estrucutra UNET
   <img src="./pipe/modeloU-net.png" width="400" title="Overall Pipeline">
 </p>
 
-Si se quiere volver a entrenar, correr los archivos de la carpeta NUCLEOUNET y CITOUNET para núcleo y citoplasma respectivamente
+Si se quiere volver a entrenar, correr los archivos de la carpeta NUCLEOUNET y CITOUNET para núcleo y citoplasma respectivamente.
 
 debe tenr la siguiente extructura de carpetas y archivos 
 
@@ -91,13 +92,13 @@ debe tenr la siguiente extructura de carpetas y archivos
 +-- entrenamientoUnet.ipynb
 ```
 
-se obtienen los modelos y sus pesos entrenados.  
+De lo anterior, se obtienen los modelos y sus pesos entrenados.  
 
-El modelo y el peso de la red UNET deben descargarse y pegarse en la carpeta PesosModelo <br>
-Estos son necesarios para probar el algoritmo de segmentacion con la red UNET y segmentar las imagenes de las células individuales.
-[pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) 
+El modelo y los pesos pre-entrenados de la red UNET deben descargarse y pegarse en la carpeta PesosModelo <br>
+Estos son necesarios para probar el algoritmo de segmentación con la red UNET de células de forma individual.
+[pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) <br>
 
-El proyecto debe tener la siguiente extructura de carpeta y archivos:
+El proyecto tiene la siguiente extructura de carpeta y archivos:
 
 
 ```
@@ -110,8 +111,7 @@ El proyecto debe tener la siguiente extructura de carpeta y archivos:
 |   +-- unetNucleo4.h5
 |   +-- unetNucleoPesos4.h5
 +--DatasetNormalizado
-|   +-- Tipo1
-|   +-- Tipo2
+|   +-- Células del conjunto de datos
 |   ...
 +--Arhivos CSV
 |   +-- .csv
@@ -119,9 +119,13 @@ El proyecto debe tener la siguiente extructura de carpeta y archivos:
 +-- UNET.ipynb
 
 ```
-La Carpeta "Codigos_F" contiene las funciones con las técnicas de preprocesado, segmentación, caracterización y evaluación con los parametros ya establecidos.
+En el archivo UNET.ipynb se realiza la segmentación UNET de núcleo y citoplasma junto con los archivos csv que contienen las métricas de evaluación de cada imagen y el conjunto de características extraídas. De igual forma, permite realizar la clasificación para problemas de dos y tres clases, con los modelos KNN y ANN.
 
-1. installar los paquetes necesarios:
+La Carpeta "Codigos_F" contiene las funciones con las técnicas de preprocesado, segmentación, caracterización y evaluación con los parámetros ya establecidos.
+
+1. instalar los paquetes necesarios:
 ```
 pip install -r requirements.txt
 ```
+
+
