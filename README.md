@@ -34,6 +34,8 @@ cuello uterino.
   <img src="./pipe/pipeB.png" width="300" title="Overall Pipeline">
 </p>
 
+
+
 # Dataset link
 1. [Herlev](http://mde-lab.aegean.gr/index.php/downloads)
 
@@ -62,16 +64,29 @@ Nota: base de datos disponible en el momento de realizar este proyecto.
 ```
 
 - UNET <br>
-los pesos de la red UNET deben descargarse y pegarse en sus respectivas carpetas núcleo y citoplasma <br>
-[pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) 
+Estrucutra UNET
+
+<p align="left">
+  <img src="./pipe/modeloU-net.png" width="400" title="Overall Pipeline">
+</p>
+
+
 ```
 +-- data
 |   +-- .
 |   +-- train
 |   +-- val
-+-- preprocesamiento.py
-+-- classBin.py
++-- preprocesamiento.ipynb
++-- entrenamientoUnet.ipynb
+```
 
+se obtienen los modelos y sus pesos entrenados.  
+
+El modelo y el peso de la red UNET deben descargarse y pegarse en sus respectivas carpetas núcleo y citoplasma <br>
+[pesos UNET](https://unicaucaeduco-my.sharepoint.com/:f:/g/personal/yeinerimbachi_unicauca_edu_co/Eu-QzwGsQLFAjr8YeqswUM8BsQJPxarAX6DfmvhCaT5_XA?e=gfJJYj) 
+
+
+```
 +-- data
 +-- preprocesamiento.ipynb
 |   +-- procesamiento de las imagenes de entrada
